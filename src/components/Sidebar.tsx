@@ -19,25 +19,25 @@ const Sidebar = () => {
                 <CommandEmpty>No results found.</CommandEmpty>
                 
                 <CommandGroup heading="Suggestions">
-                    <Link href="/" passHref>
+                    <Link href="/" legacyBehavior passHref>
                         <CommandItem className="gap-2">
                             <LayoutDashboard className="h-4 w-4" />
                             <span>Dashboard</span>
                         </CommandItem>
                     </Link>
-                    <Link href="/inventory" passHref>
+                    <Link href="/inventory" legacyBehavior passHref>
                         <CommandItem className="gap-2">
                             <Newspaper className="h-4 w-4" />
                             <span>Inventory</span>
                         </CommandItem>
                     </Link>
-                    <Link href="/scanner" passHref>
+                    <Link href="/scanner" legacyBehavior passHref>
                         <CommandItem className="gap-2">
                             <Folders className="h-4 w-4" />
                             <span>Scanner</span>
                         </CommandItem>
                     </Link>
-                    <Link href="/crypto" passHref>
+                    <Link href="/crypto" legacyBehavior passHref>
                         <CommandItem className="gap-2">
                             <CreditCard className="h-4 w-4" />
                             <span>Crypto</span>
@@ -48,21 +48,27 @@ const Sidebar = () => {
                 <CommandSeparator />
 
                 <CommandGroup heading="Settings">
-                    <CommandItem className="gap-2">
-                        <User className="h-4 w-4" />
-                        <span>Profile</span>
-                        <CommandShortcut>⌘P</CommandShortcut>
-                    </CommandItem>
-                    <CommandItem className="gap-2">
-                        <CreditCard className="h-4 w-4" />
-                        <span>Billing</span>
-                        <CommandShortcut>⌘B</CommandShortcut>
-                    </CommandItem>
-                    <CommandItem className="gap-2">
-                        <Settings className="h-4 w-4" />
-                        <span>Settings</span>
-                        <CommandShortcut>⌘S</CommandShortcut>
-                    </CommandItem>
+                    <Link href="/profile" legacyBehavior passHref>
+                        <CommandItem className="gap-2">
+                            <User className="h-4 w-4" />
+                            <span>Profile</span>
+                            <CommandShortcut>⌘P</CommandShortcut>
+                        </CommandItem>
+                    </Link>
+                    <Link href="/billing" legacyBehavior passHref>
+                        <CommandItem className="gap-2">
+                            <CreditCard className="h-4 w-4" />
+                            <span>Billing</span>
+                            <CommandShortcut>⌘B</CommandShortcut>
+                        </CommandItem>
+                    </Link>
+                    <Link href="/settings" legacyBehavior passHref>
+                        <CommandItem className="gap-2">
+                            <Settings className="h-4 w-4" />
+                            <span>Settings</span>
+                            <CommandShortcut>⌘S</CommandShortcut>
+                        </CommandItem>
+                    </Link>
                 </CommandGroup>
             </CommandList>
         </Command>

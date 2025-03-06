@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={inter.className}>
         
-        <ThemeProvider
+        <ThemeProvider 
           attribute="class"
           defaultTheme="light"
           enableSystem={false}
